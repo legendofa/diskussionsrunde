@@ -1,0 +1,24 @@
+<?php
+if($row['show_first_name']==1){
+	$first_name=$row['first_name'];
+}
+if($row['show_last_name']==1){
+	$last_name=$row['last_name'];
+}
+if($row['show_gender']==1){
+	if($row['gender']==1){
+		$gender=$lang_male;
+	}
+	if($row['gender']==2){
+		$gender=$lang_female;
+	}
+	if($row['gender']==0){
+		$gender='-';
+	}
+}
+if($row['show_party']==1){
+	$party=$row['party'];
+}
+if($row['show_party']==0){
+	$party='-';
+}

@@ -1,0 +1,28 @@
+#homepage:hover { cursor: pointer; opacity: 0.5; transition-duration: .25s }
+.hide { max-height: 0px; }
+.button:hover { background-color: white; color: #1A1A1A; cursor: pointer; transition-duration: .25s }
+.button { appearance: none; background-color: #424242; border-radius: 0; border: none; color: white; cursor: pointer; font-size: 24px; margin-top: 16px; padding: 10px 20px; text-align: center; text-decoration: none }
+.input:hover { background-color: #424242; border-color: #424242; color: white; transition-duration: .25s }
+.input:placeholder-shown:hover { color: white; transition-duration: .25s }
+.input:placeholder-shown { color: black }
+.input { background-color: white; border: 3px solid grey; color: grey; font-size: 25px; margin-top: 16px; padding: 4px 4px 4px 8px; width: 100% }
+.nohover { pointer-events: none }
+.normal_text_small { color: #1A1A1A; font-size: 25px }
+.normal_text { color: #1A1A1A; font-size: 30px }
+.settings_text { margin-top: 20px }
+.typewriter_text { color: #1A1A1A; font-size: 25px }
+.wide_button:hover { background-color: white; color: #1A1A1A; cursor: pointer; transition-duration: .25s }
+.wide_button { appearance: none; background-color: #424242; border-radius: 0; border: none; color: white; cursor: pointer; font-size: 24px; margin-top: 16px; padding: 10px 47px; text-align: center; text-decoration: none; width: 100% }
+@media only screen and (min-width:600px) {
+	#homepage { margin: 30px 0px 30px 30px; width: 500px }
+	#header { grid-column: 1/4; height: 116px }
+}
+body { background-position: center center; background-repeat: no-repeat; background-size: cover; color: #1A1A1A; font-family: Roboto; height: 100% }
+@media only screen and (max-width:600px) {
+	#homepage { margin: 15px 0px 15px 15px; width: 300px }
+	#header { grid-column: 1/4; height: 65px }
+}
+@media only screen and (max-height:600px) {
+	#homepage { margin: 15px 0px 15px 15px; width: 300px }
+	#header { grid-column: 1/4; height: 65px }
+}

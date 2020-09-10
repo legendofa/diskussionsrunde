@@ -1,0 +1,25 @@
+.g-recaptcha{
+	margin: 19px 0px -7px;
+	transform-origin:0 0;
+	transform:scale(.95);
+}
+
+#button2:hover{
+	background-color: white;
+	color: #1A1A1A;
+	transition-duration: .25s;
+}
+
+#button2{
+	background-color: #424242;
+	margin: 20px 0px 30px;
+}
+
+#div1{
+	background-color: white;
+}
+
+#select1{
+	font-style: italic;
+	width: 287px;
+}

@@ -1,0 +1,86 @@
+@media only screen and (max-width:600px) {
+	#settings { display: grid; grid-template-rows: auto auto auto auto; grid-gap: 20px; margin: 0px 20px 20px 20px }
+	#settings_user_info { border-style: solid; border-color: #424242 }
+	#display_user { display: grid; grid-template-rows: auto auto auto }
+	#profile_picture_display_user { padding: 15px; height: 150px; width: 150px }
+	#display_user_box { padding: 15px; background-color: #DDD; display: grid; align-content: center; grid-template-rows: 50px 50px 50px }
+	#display_user_information { padding: 30px; word-break: break-word }
+	#framediv { height: 200px }
+	#sidecontent { background-color: #DDD; grid-row: 4/5; list-style-type: none; overflow-x: hidden; overflow-y: auto; width: 320px }
+	#display { margin: 20px }
+	.timestamp_heading { margin: 10px; text-align: center }
+	.timestamp_line { border-bottom: 2px solid #DDD; margin: 20px 0px -20px }
+}
+@media only screen and (min-width:600px) {
+	#settings { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 30px auto auto; grid-gap: 40px; margin: 20px 40px 40px 40px }
+	#settings_user_info { border-style: solid; border-color: #424242; grid-column: 1/3 }
+	#display_user { display: grid; grid-template-columns: auto auto; grid-template-rows: auto auto }
+	#profile_picture_display_user { margin: 50px 50px; height: 250px; width: 250px }
+	#display_user_box { background-color: #DDD; display: grid; align-content: center; grid-template-rows: 70px 70px 70px; grid-column: 2/4 }
+	#display_user_information { margin: 35px 35px; grid-column: 1/3; word-break: break-word }
+	#framediv { height: 500px }
+	#sidecontent { background-color: #DDD; grid-row: 4/5; list-style-type: none; overflow-x: hidden; overflow-y: auto; width: 350px }
+	#display { margin: 40px }
+	.timestamp_heading { margin: 20px; text-align: center }
+	.timestamp_line { border-bottom: 2px solid #DDD; margin: 30px 0px -30px }
+}
+body { display: grid; grid-template-columns: auto 1fr; grid-template-rows: auto auto 50px 1fr; overflow: hidden }
+#settings_basic { position: relative }
+#display_user_id { display: grid; grid-gap: 20px }
+#user { grid-row: 2/3; background-color: #424242; color: white; font-size: 25px; padding: 20px 21px; text-decoration: none }
+#username:hover { cursor: pointer; opacity: 0.5; transition-duration: .25s }
+#menu { background-color: #DDD; grid-row: 3/4; font-size: 22px; display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 1fr }
+#content { background-color: white; grid-column: 2/3; grid-row: 2/5; overflow: auto }
+#profile_picture { margin-right: 10px; border-radius: 100px; height: 100px; width: 100px }
+#profile_picture:hover { cursor: pointer; opacity: 0.5; transition-duration: .25s }
+#status { height: 15px; margin: 0px 10px 10px; width: 15px }
+#logout:hover { cursor: pointer; opacity: 0.5; transition-duration: .25s }
+#logout { float: right; height: 30px; margin: -40px 10px; width: 30px }
+#menu div:hover { background-color: #424242; cursor: pointer; color: white; transition-duration: .25s }
+#menu div { padding-top: 15px; text-align: center }
+.create_text { margin-bottom: -10px; padding: 10px 21px }
+.create_text:hover { background-color: #2B99CE; color: white; cursor: pointer; transition-duration: .25s }
+.li_text { font-size: 25px; margin-top: 10px; padding: 10px 21px }
+#plus, #minus { float: left; height: 25px; margin-right: 15px; width: 25px }
+#search1, #search2, #search3 { margin-top: 0px; width: 100% }
+#sidecontent li a:hover { background-color: #424242; color: white; cursor: pointer; transition-duration: .25s }
+#sidecontent li a { color: #1A1A1A; font-size: 20px; display: block; padding: 8px 25px; text-decoration: none }
+#pin { height: 15px; margin: 0px 10px; width: 15px }
+#minus_small { float: right; height: 40px; margin: -52px 68px; width: 40px }
+#plus_small { float: right; height: 40px; margin: -52px 15px; width: 40px }
+#profile_picture_small { border-radius: 40px; height: 40px; margin: 5px 10px 0px -15px; width: 40px }
+#profile_picture_text, #bground_text { display: none }
+#profile_picture { border-radius: 100px; height: 100px; width: 100px }
+#profile_picture_settings { width: 100%; margin: 20px 0px 10px }
+#file1 { display: block; position: absolute; cursor: pointer; opacity: 0; padding: 10px; margin-top: 16px; width: 100% }
+#file2 { display: block; position: absolute; cursor: pointer; opacity: 0; margin-top: 16px; padding: 10px; width: 100% }
+#hamburger { display: none; height: 30px; padding: 10px; width: 30px }
+#hamburger:hover { opacity: 0.5; cursor: pointer; transition-duration: .25s }
+#hamburger_mobile { filter: invert(100%); float: right; height: 30px; margin: 5px 13px; width: 30px }
+#hamburger_mobile:hover { cursor: pointer; opacity: 0.5; transition-duration: .25s }
+#bground_settings { width: 100%; margin: 20px 0px 10px }
+.timestamp_heading div { background-color: white; display: inline; padding: 5px }
+.username:hover { background-color: #2B99CE; color: white; cursor: pointer; transition-duration: .25s }
+.username { font-size: 15px; background-color: #DDD; padding: 10px }
+.timestamp { font-size: 13px; background-color: #DDD; padding: 10px }
+.left-tri { border-color: transparent #DDD transparent transparent; border-style: solid; border-width: 0 20px 20px 0; height: 0; left: -25px; top: 0; width: 0 }
+.right-tri { border-color: transparent transparent #DDD transparent; border-style: solid; border-width: 0 20px 20px 0; height: 0; right: -25px; top: 0; width: 0 }
+.profile_picture_chat_left:hover { cursor: pointer; filter: grayscale(100%); transition-duration: .25s }
+.profile_picture_chat_left { margin-right: 5px; border-radius: 40px; height: 40px; width: 40px }
+.profile_picture_chat_right:hover { cursor: pointer; filter: grayscale(100%); transition-duration: .25s }
+.profile_picture_chat_right { margin-left: 5px; border-radius: 40px; height: 40px; width: 40px }
+#iframe { height: 100%; margin: auto; width: 100% }
+#event, #group, #friend_user { display: grid; grid-template-columns: 1fr minmax(140px, auto) 1fr }
+.timestamp_border { grid-column: 1/4 }
+#search4, #search5, #search6 { margin: 15px 15px -15px }
+.chatbubble_left { margin: 7.5px 20px 7.5px 20px; grid-column: 1/3; display: grid; grid-template-columns: auto auto 1fr auto; grid-template-rows: 1fr auto }
+.chatbubble_right { margin: 7.5px 20px 7.5px 20px; grid-column: 2/4; display: grid; grid-template-columns: 1fr auto auto auto; grid-template-rows: 1fr auto }
+#chat_image { max-width: 100%; max-height: 500px }
+#comment1, #comment2, #comment3 { grid-column: 1/3; margin: 7.5px 15px 15px; resize: vertical }
+#comment_submit { margin-left: 30px; margin-right: 16px }
+.comment_left { padding: 10px; grid-column: 3/5; background-color: #DDD; word-break: break-word; white-space: pre-wrap }
+.comment_right { padding: 10px; grid-column: 1/3; background-color: #DDD; word-break: break-word }
+#content_headline:hover { background-color: #2B99CE; color: white; cursor: pointer; transition-duration: .25s }
+#content_headline { margin: 20px 20px 0px; text-decoration: underline }
+#profile_picture_display_user_box { background-color: #DDD }
+#load_dimensions { display: none }

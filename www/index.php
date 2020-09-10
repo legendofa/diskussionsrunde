@@ -1,66 +1,53 @@
+<?php
+include $_SERVER["DOCUMENT_ROOT"].'/background.php';
+?>
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>LAMP STACK</title>
-        <link rel="stylesheet" href="/assets/css/bulma.min.css">
-    </head>
-    <body>
-        <section class="hero is-medium is-info is-bold">
-            <div class="hero-body">
-                <div class="container has-text-centered">
-                    <h1 class="title">
-                        LAMP STACK
-                    </h1>
-                    <h2 class="subtitle">
-                        Your local development environment
-                    </h2>
-                </div>
-            </div>
-        </section>
-        <section class="section">
-            <div class="container">
-                <div class="columns">
-                    <div class="column">
-                        <h3 class="title is-3 has-text-centered">Environment</h3>
-                        <hr>
-                        <div class="content">
-                            <ul>
-                                <li><?= apache_get_version(); ?></li>
-                                <li>PHP <?= phpversion(); ?></li>
-                                <li>
-                                    <?php
-                                    $link = mysqli_connect("database", "root", "tiger", null);
-
-/* check connection */
-                                    if (mysqli_connect_errno()) {
-                                        printf("MySQL connecttion failed: %s", mysqli_connect_error());
-                                    } else {
-                                        /* print server version */
-                                        printf("MySQL Server %s", mysqli_get_server_info($link));
-                                    }
-                                    /* close connection */
-                                    mysqli_close($link);
-                                    ?>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <h3 class="title is-3 has-text-centered">Quick Links</h3>
-                        <hr>
-                        <div class="content">
-                            <ul>
-                                <li><a href="/phpinfo.php">phpinfo()</a></li>
-                                <li><a href="http://localhost:<? print $_ENV['PMA_PORT']; ?>">phpMyAdmin</a></li>
-                                <li><a href="/test_db.php">Test DB Connection with mysqli</a></li>
-                                <li><a href="/test_db_pdo.php">Test DB Connection with PDO</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </body>
+<html>
+<head>
+	<title>Homepage</title>
+	<link rel="stylesheet" type="text/css" href="../css/classes.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/index.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/normalize.css"/>
+</head>
+<body>
+	<?php
+	if(isset($_SESSION['user_id'])){
+		header("Location: ../events.php");
+	}
+	else{
+		include $_SERVER["DOCUMENT_ROOT"].'/logo.php';
+		echo $lang_profile;
+		?>
+		<div id="login">
+			<div class="normal_text"><?php echo $lang_user_authentification?>:</div>
+			<form action="../php/login.php" method="POST">
+				<input class="input" type="text" name="username" placeholder="<?php echo $lang_username?>">
+				<input class="input" type="password" name="password" placeholder="<?php echo $lang_password?>">
+				<button class="button" type="submit"><?php echo $lang_login?></button>
+			</form>
+			<?php
+			if(isset($_SESSION['signed'])){
+				?>
+				<div class="normal_text">
+					<?php
+					echo $lang_account_creation_successful;
+					session_destroy();
+					?>
+				</div>
+				<?php
+			}
+			else{
+				?>
+				<div class="normal_text settings_text"><?php echo $lang_you_are_not_logged_in?></div>
+				<form action="signup.php">
+					<button class="button" type="submit"><?php echo $lang_register?></button>
+				</form>
+				<?php
+			}
+			?>
+		</div>
+		<?php
+	}
+	?>
+</body>
 </html>
